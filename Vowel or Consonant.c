@@ -1,17 +1,11 @@
 #include<stdio.h>
-#include <ctype.h>
-int main() {
+int main(){
     char ch;
-    scanf(" %c", &ch);
-
-    if (isalpha(ch)) {
-        ch = tolower(ch);
-        
-        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
-            printf("VOWEL\n");
-        } else {
-            printf("CONSONANT\n");
-        }
+    scanf("%c",&ch);
+    if(ch=='a' || ch=='e' || ch=='i' ||ch=='o'|| ch=='u' || ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U'){
+        printf("VOWEL");
     }
-    return 0;
+    else{
+        printf("CONSONANT");
+    }
 }
