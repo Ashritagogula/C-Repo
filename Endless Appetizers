@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int X, Y, R;
+    scanf("%d %d %d", &X, &Y, &R);
+    
+    // Calculate total sticks eaten
+    int extraSticks = R / 30;
+    int totalSticks = X + extraSticks;
+    
+    // Calculate the number of plates required
+    int plates = (totalSticks + Y - 1) / Y; // Ceiling division
+    
+    printf("%d\n", plates);
+    return 0;
+}
