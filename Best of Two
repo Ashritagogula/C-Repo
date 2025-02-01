@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int maxTwoSum(int a, int b, int c) {
+    int minVal = (a < b) ? ((a < c) ? a : c) : ((b < c) ? b : c);
+    return a + b + c - minVal;
+}
+
+int main() {
+    int A1, A2, A3, B1, B2, B3;
+    scanf("%d %d %d %d %d %d", &A1, &A2, &A3, &B1, &B2, &B3);
+    
+    int AliceScore = maxTwoSum(A1, A2, A3);
+    int BobScore = maxTwoSum(B1, B2, B3);
+
+    if (AliceScore > BobScore)
+        printf("Alice\n");
+    else if (AliceScore < BobScore)
+        printf("Bob\n");
+    else
+        printf("Tie\n");
+
+    return 0;
+}
